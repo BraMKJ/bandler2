@@ -1,0 +1,26 @@
+@import '../../assets/scss/app.scss';
+
+.button-group {
+  display: flex;
+  margin-top: 16px;
+
+  .button {
+
+    &__cancel, &__save {
+      padding: 16px;
+      font-size: 20px;
+    }
+
+    &__cancel {
+      background-color: $gallery;
+    }
+
+    &__save {
+      background-color: $mine-shaft;
+      color: $white;
+      margin-left: auto;
+    }
+
+  }
+
+}

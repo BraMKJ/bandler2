@@ -1,0 +1,84 @@
+@import '../../assets/scss/app.scss';
+
+/* song list */
+.song-list {
+  position: relative;
+  flex: 0 0 600px;
+  padding: 0 16px;
+  background-color: $panel-background-color;
+  border: 1px solid $panel-border-color;
+
+  &__title {
+    text-align: center;
+    line-height: 32px;
+  }
+
+  &__song {
+    border-top: 1px solid $panel-border-color;
+    display: flex;
+  }
+
+  /* link */
+
+  .link {
+    text-decoration: none;
+
+    &__song {
+      padding: 16px 0;
+      display: block;
+    }
+
+  }
+
+}
+
+/* song-list-song */
+
+.song-list-song {
+
+  &__info {
+    width: 100%
+  }
+
+  &__name {
+    margin-right: 12px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__artist {
+
+    &:before {
+      content: '-';
+      margin-right: 12px;
+    }
+
+  }
+
+  &__status {
+    margin-left: auto;
+  }
+
+}
+
+/* buttons */
+
+.button {
+
+  &__add {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__remove-song {
+    background: transparent;
+    flex: 0 0 32px;
+  }
+
+}

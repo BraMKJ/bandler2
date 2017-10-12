@@ -1,0 +1,75 @@
+@import '../../assets/scss/app.scss';
+
+.song {
+  position: relative;
+  flex: 0 0 600px;
+  padding: 0 16px;
+  background-color: $panel-background-color;
+  border: 1px solid $panel-border-color;
+}
+
+.tile {
+  position: relative;
+  padding: 16px 0;
+  background-color: $panel-background-color;
+  border-bottom: 1px solid $panel-border-color;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  .static-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+  }
+
+  &__controls {
+    display: flex;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  /* buttons */
+
+  .button {
+
+    &__back {
+      flex: 0 0 32px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      margin-top: -16px;
+    }
+
+    &__edit-song {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -16px;
+      width: 32px;
+      height: 32px;
+    }
+
+    &__cancel, &__save {
+      padding: 16px;
+      font-size: 20px;
+    }
+
+    &__cancel {
+      background-color: $gallery;
+    }
+
+    &__save {
+      background-color: $mine-shaft;
+      color: $white;
+      margin-left: auto;
+    }
+  }
+}
