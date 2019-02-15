@@ -3,47 +3,19 @@ import {
   getSongs,
   removeSongRemovedEvent,
   removeSongAddedEvent,
-  watchSongAddedEvent,
+  watchSongAddedEvxent,
   watchSongRemovedEvent } from '../actions/getSongs'
 import { removeSong } from '../actions/removeSong'
 import { clearSongList } from '../actions/clearSongList'
 import { clearAddSong } from '../actions/clearAddSong'
 import { getSingle } from '../actions/getSingle'
 import { showModal, hideModal } from '../actions/toggleModal'
+import { getVisibleSongs} from '../selectors/getVisibleSongs'
 import SongList from '../components/SongList/SongList'
-
-const getVisibleSongs = (state, filter) => {
-  switch (filter) {
-    case 'SHOW_ALL':
-      return state
-    case 'SHOW_ACTIVE':
-      return {
-        ...state,
-        songs: state.songs.filter(song => song.status === 'active')
-      }
-    case 'SHOW_INACTIVE':
-      return {
-        ...state,
-        songs: state.songs.filter(song => song.status === 'inactive')
-      }
-    case 'SHOW_IN_PROGRESS':
-      return {
-        ...state,
-        songs: state.songs.filter(song => song.status === 'in progress')
-      }
-    case 'SHOW_NICE_TO_HAVE':
-      return {
-        ...state,
-        songs: state.songs.filter(song => song.status === 'nice to have')
-      }
-    default:
-      return state
-  }
-}
 
 const mapStateToProps = state => {
   return {
-    songs: getVisibleSongs(state.songs, state.visibilityFilter),
+    songs: getVisibleSongs(state),
     addSongModal: Boolean(state.modal.addSong)
   }
 }

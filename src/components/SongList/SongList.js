@@ -33,7 +33,7 @@ export default class SongList extends Component {
   }
 
   render() {
-    const { songs } = this.props.songs
+    const { songs } = this.props
     return (
       <Wrapper>
         <div className="song-list">

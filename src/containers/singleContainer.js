@@ -9,11 +9,12 @@ import {
 } from '../actions/updateSong'
 import { turnOnEditMode, turnOffEditMode } from '../actions/editMode'
 import { clearSingle } from '../actions/getSingle'
+import { getSong } from '../selectors/getSong'
 import Song from '../components/Song/Song'
 
 const mapStateToProps = state => {
   return {
-    song: state.song,
+    song: getSong(state),
     statuses: state.addSong.statuses
   }
 }

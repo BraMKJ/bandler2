@@ -72,3 +72,4 @@ export const updateSongStatusInput = newSongStatus => {
     newSongStatus
   }
 }
+
